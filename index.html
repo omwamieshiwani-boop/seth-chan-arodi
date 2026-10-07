@@ -1,0 +1,1852 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Seth Chan Arodi — Strategic Procurement & Supply Chain Leader.">
+<meta name="theme-color" content="#0a0a0a">
+<title>Strategic Procurement & Supply Chain Leader | Seth Chan Arodi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --black:#0a0a0a;
+  --panel:#121212;
+  --panel2:#181818;
+  --ivory:#ffffff;
+  --muted:#a8a49b;
+  --gold:#d4af37;
+  --accent:#ffffff;
+  --line:rgba(255,255,255,.10);
+  --soft:#0f0f0f;
+  --shadow:rgba(0,0,0,.45);
+  --max:1180px;
+  --radius:24px;
+}
+
+body.light{
+  --black:#ffffff;
+  --panel:#f4f4f4;
+  --panel2:#e8e8e8;
+  --ivory:#0a0a0a;
+  --muted:#68645c;
+  --gold:#b8860b;
+  --accent:#0a0a0a;
+  --line:rgba(0,0,0,.12);
+  --soft:#f7f7f7;
+  --shadow:rgba(40,35,25,.14);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"DM Sans",sans-serif;
+  background:var(--black);
+  color:var(--ivory);
+  line-height:1.65;
+  overflow-x:hidden;
+  min-height:100vh;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font:inherit;
+}
+
+.container{
+  width:min(var(--max),calc(100% - 40px));
+  margin:auto;
+}
+
+.noise{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.035;
+  z-index:100;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+}
+
+.nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:50;
+  padding:18px 0;
+  transition:.3s;
+}
+
+.nav.scrolled{
+  background:rgba(10,10,10,.85);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 10px 40px rgba(0,0,0,.3);
+}
+
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-family:Manrope;
+  font-weight:800;
+  letter-spacing:-.04em;
+  font-size:22px;
+  background:linear-gradient(135deg,var(--gold),var(--accent));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  cursor:pointer;
+}
+
+.logo span{
+  color:var(--gold);
+}
+
+.navlinks{
+  display:flex;
+  gap:30px;
+  font-size:13px;
+  color:#d0ccc3;
+}
+
+.navlinks a{
+  position:relative;
+  transition:.3s;
+  cursor:pointer;
+}
+
+.navlinks a:after{
+  content:"";
+  position:absolute;
+  bottom:-4px;
+  left:0;
+  width:0;
+  height:2px;
+  background:linear-gradient(90deg,var(--gold),var(--accent));
+  transition:.3s;
+}
+
+.navlinks a:hover:after{
+  width:100%;
+}
+
+.navlinks a:hover{
+  color:var(--gold);
+}
+
+.navlinks a.active{
+  color:var(--gold);
+}
+
+.navlinks a.active:after{
+  width:100%;
+}
+
+.nav-cta{
+  border:2px solid var(--gold);
+  padding:9px 18px;
+  border-radius:100px;
+  background:rgba(212,175,55,.1);
+  color:var(--gold);
+  font-size:13px;
+  font-weight:600;
+  transition:.3s;
+  cursor:pointer;
+}
+
+.nav-cta:hover{
+  background:var(--gold);
+  color:var(--black);
+  transform:translateY(-2px);
+}
+
+.menu{
+  display:none;
+  background:none;
+  border:0;
+  color:var(--ivory);
+  font-size:25px;
+  cursor:pointer;
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding:130px 0 80px;
+  position:relative;
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  width:800px;
+  height:800px;
+  right:-300px;
+  top:50px;
+  background:radial-gradient(circle,rgba(212,175,55,.15),transparent 65%);
+  filter:blur(40px);
+  animation:float 8s ease-in-out infinite;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:600px;
+  height:600px;
+  left:-200px;
+  bottom:100px;
+  background:radial-gradient(circle,rgba(255,255,255,.08),transparent 65%);
+  filter:blur(40px);
+  animation:float 10s ease-in-out infinite reverse;
+}
+
+@keyframes float{
+  0%,100%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(30px);
+  }
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  font-size:11px;
+  font-weight:700;
+  margin-bottom:25px;
+  animation:slideInDown .8s ease-out;
+}
+
+.dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 20px var(--gold),0 0 40px rgba(212,175,55,.4);
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:70px;
+  align-items:center;
+}
+
+h1{
+  font-family:Manrope;
+  font-size:clamp(54px,7.5vw,104px);
+  line-height:.92;
+  letter-spacing:-.075em;
+  max-width:850px;
+  animation:slideInLeft .8s ease-out;
+}
+
+h1 em{
+  font-style:normal;
+  background:linear-gradient(135deg,var(--gold),var(--accent));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+.hero-copy{
+  font-size:18px;
+  color:var(--muted);
+  max-width:650px;
+  margin:30px 0;
+  animation:slideInUp .8s ease-out .2s both;
+  line-height:1.8;
+}
+
+.actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  animation:slideInUp .8s ease-out .4s both;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 22px;
+  border-radius:100px;
+  border:2px solid var(--line);
+  font-weight:700;
+  font-size:13px;
+  transition:.25s;
+  cursor:pointer;
+}
+
+.btn.primary{
+  background:linear-gradient(135deg,var(--gold),var(--accent));
+  color:var(--black);
+  border:2px solid transparent;
+}
+
+.btn.primary:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 40px rgba(212,175,55,.3);
+}
+
+.btn.secondary{
+  color:var(--gold);
+  border-color:var(--gold);
+  background:transparent;
+}
+
+.btn.secondary:hover{
+  border-color:var(--accent);
+  color:var(--accent);
+  background:rgba(255,255,255,.05);
+  transform:translateY(-4px);
+}
+
+.btn.whatsapp{
+  color:#25d366;
+  border-color:#25d366;
+  background:rgba(37,211,102,.08);
+}
+
+.btn.whatsapp:hover{
+  background:#25d366;
+  color:#08260f;
+  border-color:#25d366;
+  transform:translateY(-4px);
+  box-shadow:0 15px 40px rgba(37,211,102,.25);
+}
+
+.profile-card{
+  background:linear-gradient(145deg,var(--panel2),var(--soft));
+  border:2px solid var(--line);
+  border-radius:32px;
+  padding:22px;
+  transform:rotate(2deg);
+  box-shadow:0 35px 90px var(--shadow);
+  animation:slideInRight .8s ease-out;
+  transition:.3s;
+}
+
+.profile-card:hover{
+  transform:rotate(0deg) translateY(-10px);
+  border-color:rgba(212,175,55,.4);
+}
+
+.profile-art{
+  height:480px;
+  border-radius:22px;
+  background:linear-gradient(160deg,#302d27,var(--soft));
+  position:relative;
+  overflow:hidden;
+}
+
+.profile-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+  border-radius:22px;
+  filter:saturate(.95) contrast(1.1);
+}
+
+.image-fallback{
+  position:absolute;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:30px;
+  background:linear-gradient(135deg,#24211d,#111);
+  color:#aaa;
+}
+
+.profile-image[src=""],
+.profile-image:not([src]){
+  display:none;
+}
+
+.profile-label{
+  position:absolute;
+  left:22px;
+  top:22px;
+  background:rgba(10,10,10,.72);
+  backdrop-filter:blur(12px);
+  padding:9px 13px;
+  border-radius:100px;
+  font-size:11px;
+  color:var(--gold);
+  border:1px solid rgba(212,175,55,.4);
+  font-weight:600;
+  z-index:3;
+}
+
+.profile-bottom{
+  position:absolute;
+  bottom:22px;
+  left:22px;
+  right:22px;
+  padding:20px;
+  border-radius:20px;
+  background:rgba(10,10,10,.78);
+  backdrop-filter:blur(15px);
+  border:1px solid var(--line);
+  z-index:3;
+}
+
+.profile-bottom strong{
+  display:block;
+  font-family:Manrope;
+  font-size:20px;
+}
+
+.profile-bottom small{
+  color:var(--muted);
+}
+
+.section{
+  padding:115px 0;
+  border-top:1px solid var(--line);
+  position:relative;
+}
+
+.section:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  opacity:.3;
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  margin-bottom:50px;
+  align-items:end;
+}
+
+.kicker{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  font-size:11px;
+  font-weight:700;
+  margin-bottom:15px;
+  display:block;
+}
+
+h2{
+  font-family:Manrope;
+  font-size:clamp(42px,5.5vw,84px);
+  line-height:.95;
+  letter-spacing:-.04em;
+  background:linear-gradient(135deg,var(--gold),var(--accent));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  max-width:750px;
+}
+
+.lead{
+  font-size:18px;
+  color:var(--muted);
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Seth Chan Arodi — Strategic Procurement & Supply Chain Leader.">
+<meta name="theme-color" content="#0a0a0a">
+<title>Strategic Procurement & Supply Chain Leader | Seth Chan Arodi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --black:#0a0a0a;
+  --panel:#121212;
+  --panel2:#181818;
+  --ivory:#ffffff;
+  --muted:#a8a49b;
+  --gold:#d4af37;
+  --accent:#ffffff;
+  --line:rgba(255,255,255,.10);
+  --soft:#0f0f0f;
+  --shadow:rgba(0,0,0,.45);
+  --max:1180px;
+  --radius:24px;
+}
+
+body.light{
+  --black:#ffffff;
+  --panel:#f4f4f4;
+  --panel2:#e8e8e8;
+  --ivory:#0a0a0a;
+  --muted:#68645c;
+  --gold:#b8860b;
+  --accent:#0a0a0a;
+  --line:rgba(0,0,0,.12);
+  --soft:#f7f7f7;
+  --shadow:rgba(40,35,25,.14);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"DM Sans",sans-serif;
+  background:var(--black);
+  color:var(--ivory);
+  line-height:1.65;
+  overflow-x:hidden;
+  min-height:100vh;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font:inherit;
+}
+
+.container{
+  width:min(var(--max),calc(100% - 40px));
+  margin:auto;
+}
+
+.noise{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.035;
+  z-index:100;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+}
+
+.nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:50;
+  padding:18px 0;
+  transition:.3s;
+}
+
+.nav.scrolled{
+  background:rgba(10,10,10,.85);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 10px 40px rgba(0,0,0,.3);
+}
+
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-family:Manrope;
+  font-weight:800;
+  letter-spacing:-.04em;
+  font-size:22px;
+  background:linear-gradient(135deg,var(--gold),var(--accent));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  cursor:pointer;
+}
+
+.logo span{
+  color:var(--gold);
+}
+
+.navlinks{
+  display:flex;
+  gap:30px;
+  font-size:13px;
+  color:#d0ccc3;
+}
+
+.navlinks a{
+  position:relative;
+  transition:.3s;
+  cursor:pointer;
+}
+
+.navlinks a:after{
+  content:"";
+  position:absolute;
+  bottom:-4px;
+  left:0;
+  width:0;
+  height:2px;
+  background:linear-gradient(90deg,var(--gold),var(--accent));
+  transition:.3s;
+}
+
+.navlinks a:hover:after{
+  width:100%;
+}
+
+.navlinks a:hover{
+  color:var(--gold);
+}
+
+.navlinks a.active{
+  color:var(--gold);
+}
+
+.navlinks a.active:after{
+  width:100%;
+}
+
+.nav-cta{
+  border:2px solid var(--gold);
+  padding:9px 18px;
+  border-radius:100px;
+  background:rgba(212,175,55,.1);
+  color:var(--gold);
+  font-size:13px;
+  font-weight:600;
+  transition:.3s;
+  cursor:pointer;
+}
+
+.nav-cta:hover{
+  background:var(--gold);
+  color:var(--black);
+  transform:translateY(-2px);
+}
+
+.menu{
+  display:none;
+  background:none;
+  border:0;
+  color:var(--ivory);
+  font-size:25px;
+  cursor:pointer;
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding:130px 0 80px;
+  position:relative;
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  width:800px;
+  height:800px;
+  right:-300px;
+  top:50px;
+  background:radial-gradient(circle,rgba(212,175,55,.15),transparent 65%);
+  filter:blur(40px);
+  animation:float 8s ease-in-out infinite;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:600px;
+  height:600px;
+  left:-200px;
+  bottom:100px;
+  background:radial-gradient(circle,rgba(255,255,255,.08),transparent 65%);
+  filter:blur(40px);
+  animation:float 10s ease-in-out infinite reverse;
+}
+
+@keyframes float{
+  0%,100%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(30px);
+  }
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  font-size:11px;
+  font-weight:700;
+  margin-bottom:25px;
+  animation:slideInDown .8s ease-out;
+}
+
+.dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 20px var(--gold),0 0 40px rgba(212,175,55,.4);
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:70px;
+  align-items:center;
+}
+
+h1{
+  font-family:Manrope;
+  font-size:clamp(54px,7.5vw,104px);
+  line-height:.92;
+  letter-spacing:-.075em;
+  max-width:850px;
+  animation:slideInLeft .8s ease-out;
+}
+
+h1 em{
+  font-style:normal;
+  background:linear-gradient(135deg,var(--gold),var(--accent));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+.hero-copy{
+  font-size:18px;
+  color:var(--muted);
+  max-width:650px;
+  margin:30px 0;
+  animation:slideInUp .8s ease-out .2s both;
+  line-height:1.8;
+}
+
+.actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  animation:slideInUp .8s ease-out .4s both;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 22px;
+  border-radius:100px;
+  border:2px solid var(--line);
+  font-weight:700;
+  font-size:13px;
+  transition:.25s;
+  cursor:pointer;
+}
+
+.btn.primary{
+  background:linear-gradient(135deg,var(--gold),var(--accent));
+  color:var(--black);
+  border:2px solid transparent;
+}
+
+.btn.primary:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 40px rgba(212,175,55,.3);
+}
+
+.btn.secondary{
+  color:var(--gold);
+  border-color:var(--gold);
+  background:transparent;
+}
+
+.btn.secondary:hover{
+  border-color:var(--accent);
+  color:var(--accent);
+  background:rgba(255,255,255,.05);
+  transform:translateY(-4px);
+}
+
+.btn.whatsapp{
+  color:#25d366;
+  border-color:#25d366;
+  background:rgba(37,211,102,.08);
+}
+
+.btn.whatsapp:hover{
+  background:#25d366;
+  color:#08260f;
+  border-color:#25d366;
+  transform:translateY(-4px);
+  box-shadow:0 15px 40px rgba(37,211,102,.25);
+}
+
+.profile-card{
+  background:linear-gradient(145deg,var(--panel2),var(--soft));
+  border:2px solid var(--line);
+  border-radius:32px;
+  padding:22px;
+  transform:rotate(2deg);
+  box-shadow:0 35px 90px var(--shadow);
+  animation:slideInRight .8s ease-out;
+  transition:.3s;
+}
+
+.profile-card:hover{
+  transform:rotate(0deg) translateY(-10px);
+  border-color:rgba(212,175,55,.4);
+}
+
+.profile-art{
+  height:480px;
+  border-radius:22px;
+  background:linear-gradient(160deg,#302d27,var(--soft));
+  position:relative;
+  overflow:hidden;
+}
+
+.profile-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+  border-radius:22px;
+  filter:saturate(.95) contrast(1.1);
+}
+
+.image-fallback{
+  position:absolute;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:30px;
+  background:linear-gradient(135deg,#24211d,#111);
+  color:#aaa;
+}
+
+.profile-image[src=""],
+.profile-image:not([src]){
+  display:none;
+}
+
+.profile-label{
+  position:absolute;
+  left:22px;
+  top:22px;
+  background:rgba(10,10,10,.72);
+  backdrop-filter:blur(12px);
+  padding:9px 13px;
+  border-radius:100px;
+  font-size:11px;
+  color:var(--gold);
+  border:1px solid rgba(212,175,55,.4);
+  font-weight:600;
+  z-index:3;
+}
+
+.profile-bottom{
+  position:absolute;
+  bottom:22px;
+  left:22px;
+  right:22px;
+  padding:20px;
+  border-radius:20px;
+  background:rgba(10,10,10,.78);
+  backdrop-filter:blur(15px);
+  border:1px solid var(--line);
+  z-index:3;
+}
+
+.profile-bottom strong{
+  display:block;
+  font-family:Manrope;
+  font-size:20px;
+}
+
+.profile-bottom small{
+  color:var(--muted);
+}
+
+.section{
+  padding:115px 0;
+  border-top:1px solid var(--line);
+  position:relative;
+}
+
+.section:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  opacity:.3;
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  margin-bottom:50px;
+  align-items:end;
+}
+
+.kicker{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  font-size:11px;
+  font-weight:700;
+  margin-bottom:15px;
+  display:block;
+}
+
+h2{
+  font-family:Manrope;
+  font-size:clamp(42px,5.5vw,84px);
+  line-height:.95;
+  letter-spacing:-.04em;
+  background:linear-gradient(135deg,var(--gold),var(--accent));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  max-width:750px;
+}
+
+.lead{
+  font-size:18px;
+  color:var(--muted);
+  max-width:600px;
+  line-height:1.8;
+}
+
+.section-head .lead{
+  margin:0;
+  font-size:16px;
+  max-width:450px;
+}
+
+.case-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+
+.case{
+  border:2px solid var(--line);
+  padding:35px 30px;
+  border-radius:24px;
+  background:linear-gradient(145deg,rgba(255,255,255,.03),rgba(255,255,255,.01));
+  transition:.3s;
+  cursor:pointer;
+}
+
+.case-tag{
+  display:block;
+  color:var(--gold);
+  text-transform:uppercase;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.16em;
+  margin-bottom:12px;
+}
+
+.case h3{
+  font-family:Manrope;
+  font-size:clamp(20px,3vw,28px);
+  line-height:1.3;
+  margin-bottom:15px;
+}
+
+.case p{
+  font-size:16px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.case:hover{
+  border-color:var(--gold);
+  background:linear-gradient(145deg,rgba(212,175,55,.08),rgba(212,175,55,.04));
+  transform:translateY(-8px);
+}
+
+.skill-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+
+.skill{
+  border:2px solid var(--line);
+  padding:25px;
+  border-radius:18px;
+  background:linear-gradient(145deg,rgba(255,255,255,.03),rgba(255,255,255,.01));
+  transition:.3s;
+}
+
+.skill:hover{
+  border-color:var(--gold);
+  background:linear-gradient(145deg,rgba(212,175,55,.08),rgba(212,175,55,.04));
+}
+
+.skill-num{
+  color:var(--gold);
+  font-family:Manrope;
+  font-weight:700;
+  font-size:14px;
+}
+
+.skill h3{
+  font-family:Manrope;
+  font-size:18px;
+  margin-top:8px;
+  margin-bottom:8px;
+}
+
+.skill p{
+  font-size:14px;
+  color:var(--muted);
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+}
+
+.about-text{
+  font-size:16px;
+  line-height:1.8;
+}
+
+.about-text p{
+  margin-bottom:20px;
+  color:var(--muted);
+}
+
+.timeline{
+  display:flex;
+  flex-direction:column;
+  gap:35px;
+}
+
+.job{
+  border-left:3px solid var(--line);
+  padding-left:35px;
+  transition:.3s;
+}
+
+.job:hover{
+  border-left-color:var(--gold);
+}
+
+.job-top{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:15px;
+  align-items:start;
+}
+
+.job h3{
+  font-family:Manrope;
+  font-size:20px;
+  margin-bottom:4px;
+}
+
+.job-company{
+  color:var(--gold);
+  font-size:13px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+}
+
+.date{
+  font-size:13px;
+  color:var(--gold);
+  white-space:nowrap;
+  font-weight:600;
+}
+
+.job ul{
+  list-style:none;
+  font-size:15px;
+  line-height:1.7;
+  color:var(--muted);
+}
+
+.job li{
+  margin-bottom:12px;
+  padding-left:18px;
+  position:relative;
+}
+
+.job li:before{
+  content:"→";
+  position:absolute;
+  left:0;
+  color:var(--gold);
+  font-weight:bold;
+}
+
+.metrics{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.metric{
+  border:2px solid var(--line);
+  padding:30px;
+  border-radius:20px;
+  background:linear-gradient(145deg,rgba(255,255,255,.03),rgba(255,255,255,.01));
+  transition:.3s;
+}
+
+.metric:hover{
+  border-color:var(--gold);
+  background:linear-gradient(145deg,rgba(212,175,55,.08),rgba(212,175,55,.04));
+  transform:translateY(-6px);
+}
+
+.metric strong{
+  display:block;
+  font-family:Manrope;
+  font-size:18px;
+  margin-bottom:5px;
+}
+
+.metric span{
+  display:block;
+  color:var(--gold);
+  font-size:12px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  margin-bottom:12px;
+}
+
+.metric p{
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.leadership{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+
+.lead-card{
+  border:2px solid var(--line);
+  padding:30px;
+  border-radius:20px;
+  background:linear-gradient(145deg,rgba(255,255,255,.03),rgba(255,255,255,.01));
+  transition:.3s;
+}
+
+.lead-card:hover{
+  border-color:var(--gold);
+  background:linear-gradient(145deg,rgba(212,175,55,.08),rgba(212,175,55,.04));
+  transform:translateY(-6px);
+}
+
+.lead-card h3{
+  font-family:Manrope;
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+.lead-card p{
+  font-size:15px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.education{
+  display:grid;
+  grid-template-columns:repeat(1,1fr);
+  gap:35px;
+  max-width:700px;
+}
+
+.edu{
+  border:2px solid var(--line);
+  padding:30px;
+  border-radius:20px;
+  background:linear-gradient(145deg,rgba(255,255,255,.03),rgba(255,255,255,.01));
+  transition:.3s;
+}
+
+.edu:hover{
+  border-color:var(--gold);
+  background:linear-gradient(145deg,rgba(212,175,55,.08),rgba(212,175,55,.04));
+}
+
+.edu small{
+  display:block;
+  color:var(--gold);
+  font-size:12px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  margin-bottom:8px;
+}
+
+.edu h3{
+  font-family:Manrope;
+  font-size:20px;
+  margin-bottom:5px;
+}
+
+.edu p{
+  font-size:14px;
+  color:var(--muted);
+}
+
+.tools{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:20px;
+}
+
+.tool{
+  display:inline-block;
+  padding:8px 14px;
+  border:1px solid var(--line);
+  border-radius:100px;
+  font-size:12px;
+  background:rgba(255,255,255,.04);
+  transition:.3s;
+}
+
+.tool:hover{
+  border-color:var(--gold);
+  background:rgba(212,175,55,.1);
+  color:var(--gold);
+}
+
+.contact{
+  text-align:center;
+  padding:90px 0 110px;
+}
+
+.contact .kicker{
+  display:block;
+  margin-bottom:25px;
+}
+
+.contact h2{
+  margin-bottom:30px;
+}
+
+.contact p{
+  max-width:650px;
+  margin:0 auto 40px;
+  font-size:18px;
+  color:var(--muted);
+  line-height:1.8;
+}
+
+.contact .actions{
+  justify-content:center;
+}
+
+footer{
+  border-top:1px solid var(--line);
+  padding:28px 0;
+  color:#777;
+  font-size:12px;
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+#topBtn{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  border:2px solid var(--gold);
+  background:var(--panel);
+  color:var(--gold);
+  z-index:40;
+  display:none;
+  cursor:pointer;
+  font-weight:700;
+  transition:.3s;
+}
+
+#topBtn:hover{
+  background:var(--gold);
+  color:var(--black);
+  transform:scale(1.1);
+}
+
+.theme-toggle{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  border:2px solid var(--line);
+  background:var(--panel);
+  color:var(--ivory);
+  padding:9px 13px;
+  border-radius:100px;
+  cursor:pointer;
+  font-size:12px;
+  transition:.25s;
+  font-weight:600;
+}
+
+.theme-toggle:hover{
+  border-color:var(--gold);
+  color:var(--gold);
+}
+
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .8s ease,transform .8s ease;
+}
+
+.reveal.visible{
+  opacity:1;
+  transform:none;
+}
+
+@keyframes slideInDown{
+  from{
+    opacity:0;
+    transform:translateY(-30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes slideInLeft{
+  from{
+    opacity:0;
+    transform:translateX(-50px);
+  }
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+@keyframes slideInUp{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes slideInRight{
+  from{
+    opacity:0;
+    transform:translateX(50px);
+  }
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+@media(max-width:900px){
+
+  .navlinks,
+  .nav-cta{
+    display:none;
+  }
+
+  .theme-toggle{
+    display:inline-flex;
+    margin-left:auto;
+    margin-right:8px;
+  }
+
+  .menu{
+    display:block;
+  }
+
+  .hero-grid,
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .profile-card{
+    max-width:520px;
+    margin:auto;
+  }
+
+  .profile-art{
+    height:420px;
+  }
+
+  .skill-grid,
+  .leadership{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .metrics{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .case-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:600px){
+
+  .container{
+    width:min(var(--max),calc(100% - 28px));
+  }
+
+  .hero{
+    padding-top:120px;
+  }
+
+  .hero-copy{
+    font-size:16px;
+  }
+
+  .profile-art{
+    height:370px;
+  }
+
+  .skill-grid,
+  .metrics,
+  .leadership{
+    grid-template-columns:1fr;
+  }
+
+  .section{
+    padding:80px 0;
+  }
+
+  .section-head{
+    display:block;
+  }
+
+  .lead{
+    margin-top:18px;
+  }
+
+  .job-top{
+    display:block;
+  }
+
+  .date{
+    display:block;
+    margin-top:5px;
+  }
+
+  .footer-inner{
+    display:block;
+  }
+
+  .footer-inner span+span{
+    display:block;
+    margin-top:8px;
+  }
+}
+
+body.light{
+  --muted:#4b4b4b;
+  --line:rgba(20,20,20,.20);
+}
+
+body.light .lead,
+body.light .section-head p,
+body.light .about-text,
+body.light .skill p,
+body.light .timeline p,
+body.light .job ul,
+body.light .case p,
+body.light .metric p,
+body.light .lead-card p,
+body.light .edu p,
+body.light footer{
+  color:#3f3f3f;
+}
+
+body.light h2{
+  background:linear-gradient(135deg,#111827,#b8860b);
+  -webkit-text-fill-color:transparent;
+}
+
+.mobile-drawer {
+  position:fixed;
+  inset:0;
+  z-index:80;
+  display:none;
+  background:rgba(5,5,5,.72);
+  backdrop-filter:blur(8px);
+}
+
+.mobile-drawer.open { display:block; }
+
+.mobile-panel {
+  position:absolute;
+  top:0; right:0;
+  width:min(88vw,390px);
+  height:100%;
+  padding:92px 24px 28px;
+  background:var(--panel);
+  border-left:1px solid var(--line);
+  box-shadow:-25px 0 70px rgba(0,0,0,.45);
+  overflow:auto;
+}
+
+.mobile-panel .drawer-title {
+  color:var(--gold);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+.mobile-panel a {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 0;
+  border-bottom:1px solid var(--line);
+  font-family:Manrope;
+  font-weight:700;
+  font-size:17px;
+  cursor:pointer;
+}
+
+.mobile-panel a span { color:var(--gold); font-size:12px; }
+
+.drawer-close {
+  position:absolute;
+  top:20px; right:20px;
+  width:44px; height:44px;
+  border:1px solid var(--line);
+  border-radius:50%;
+  background:var(--panel2);
+  color:var(--ivory);
+  cursor:pointer;
+  font-size:22px;
+}
+
+body.drawer-open { overflow:hidden; }
+
+.page-hero {
+  padding:150px 0 80px;
+  min-height:48vh;
+  display:flex;
+  align-items:end;
+  border-bottom:1px solid var(--line);
+  position:relative;
+  overflow:hidden;
+}
+
+.page-hero:before {
+  content:"";
+  position:absolute; width:650px; height:650px; right:-260px; top:-220px;
+  background:radial-gradient(circle,rgba(212,175,55,.12),transparent 65%);
+  filter:blur(30px); pointer-events:none;
+}
+
+.page-hero .kicker, .page-hero h1, .page-hero p { position:relative; z-index:1; }
+.page-hero h1 { font-size:clamp(48px,7vw,88px); max-width:900px; }
+.page-hero p { max-width:720px; color:var(--muted); font-size:18px; margin-top:24px; }
+
+.page-content { padding:90px 0 120px; }
+.page-content > .section { border-top:0; padding:0; }
+.page-content > .section:before { display:none; }
+
+.page-actions {
+  display:flex; gap:12px; flex-wrap:wrap; margin-top:35px;
+}
+
+.footer-nav {
+  display:flex; gap:10px; flex-wrap:wrap; margin-top:18px;
+}
+
+.footer-nav a {
+  padding:8px 12px; border:1px solid var(--line); border-radius:100px;
+  color:var(--muted); font-size:12px; cursor:pointer;
+}
+
+.footer-nav a:hover { color:var(--gold); border-color:var(--gold); }
+
+a.card-link { display:block; color:inherit; }
+a.card-link:hover { color:inherit; }
+button, a { -webkit-tap-highlight-color:transparent; }
+
+.page-wrapper {
+  display: none;
+  min-height: 100vh;
+}
+
+.page-wrapper.active {
+  display: block;
+}
+
+@media(max-width:900px){
+  .nav { padding:12px 0; }
+  .nav-inner { min-height:48px; }
+  .logo { font-size:20px; }
+  .theme-toggle { margin-left:auto; margin-right:8px; }
+  .menu {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:44px; height:44px;
+    border:1px solid var(--line);
+    border-radius:12px;
+    background:var(--panel);
+    color:var(--ivory);
+    font-size:22px;
+  }
+  .navlinks, .nav-cta { display:none !important; }
+  .page-hero { padding:125px 0 60px; min-height:42vh; }
+  .page-hero h1 { font-size:clamp(42px,12vw,68px); }
+}
+
+@media(max-width:600px){
+  .container { width:min(var(--max),calc(100% - 28px)); }
+  .page-content { padding:65px 0 90px; }
+  .page-hero p { font-size:16px; }
+  .page-actions .btn { width:100%; justify-content:center; }
+  .mobile-panel { width:92vw; }
+}
+
+</style>
+</head>
+<body>
+<div class="noise"></div>
+
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a class="logo" id="navLogo">SETH<span>.</span></a>
+    <div class="navlinks">
+      <a data-page="home">Home</a>
+      <a data-page="profile">Profile</a>
+      <a data-page="capabilities">Capabilities</a>
+      <a data-page="experience">Experience</a>
+      <a data-page="work">Selected Work</a>
+      <a data-page="leadership">Leadership</a>
+      <a data-page="education">Education</a>
+      <a data-page="contact">Contact</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Switch theme" type="button">
+      <span class="theme-icon">☾</span><span class="theme-text">Light</span>
+    </button>
+    <a class="nav-cta" href="mailto:arodichans@gmail.com">Let's Talk ↗</a>
+    <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false" type="button">☰</button>
+  </div>
+</nav>
+
+<div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+  <div class="mobile-panel">
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu">×</button>
+    <div class="drawer-title">Navigate</div>
+    <a data-page="home"><span>01</span>Home<span>↗</span></a>
+    <a data-page="profile"><span>02</span>Profile<span>↗</span></a>
+    <a data-page="capabilities"><span>03</span>Capabilities<span>↗</span></a>
+    <a data-page="experience"><span>04</span>Experience<span>↗</span></a>
+    <a data-page="work"><span>05</span>Selected Work<span>↗</span></a>
+    <a data-page="leadership"><span>06</span>Leadership<span>↗</span></a>
+    <a data-page="education"><span>07</span>Education<span>↗</span></a>
+    <a data-page="contact"><span>08</span>Contact<span>↗</span></a>
+    <div class="page-actions">
+      <a class="btn primary" data-page="contact">Let's Talk ↗</a>
+    </div>
+  </div>
+</div>
+
+<!-- HOME PAGE -->
+<div class="page-wrapper active" id="home"><main class="page-shell"><header class="hero"><div class="container hero-grid"><div class="reveal"><div class="eyebrow"><span class="dot"></span>Procurement · Supply Chain · Strategic Sourcing</div><h1>Driving sourcing <em>excellence</em> and operational performance.</h1><p class="hero-copy">Strategic Procurement and Supply Chain Leader with extensive experience managing high-value commercial and technical inventories, optimizing cost structures, and enabling business continuity for large telecommunication and corporate organizations.</p><div class="actions"><a class="btn primary" data-page="experience">Explore my journey ↓</a><a class="btn secondary" data-page="contact">Get in touch ↗</a></div></div><div class="profile-card reveal"><div class="profile-art"><img class="profile-image" src="/images/profile-hero.jpg" alt="Seth Chan Arodi" onerror="showImageError(this)"><div class="image-fallback"><div><strong>Seth Chan Arodi</strong><br>Add profile-hero.jpg to the /images folder.</div></div><div class="profile-label">NAIROBI · KENYA</div><div class="profile-bottom"><strong>Seth Chan Arodi</strong><small>Procurement · Supply Chain · Strategic Sourcing</small></div></div></div></div></header><section class="section"><div class="container"><div class="section-head reveal"><div><div class="kicker">Explore</div><h2>One professional.<br>Every dimension.</h2></div><p class="lead">Click on each section to explore my professional journey.</p></div><div class="case-grid"><a class="case card-link reveal" data-page="profile"><div><div class="case-tag">01 / Profile</div><h3>Strategic vision. Operational excellence.</h3></div><p>Background, professional focus and core skills.</p></a><a class="case card-link reveal" data-page="capabilities"><div><div class="case-tag">02 / Capabilities</div><h3>Where strategy meets execution.</h3></div><p>Sourcing, logistics, compliance, and leadership capabilities.</p></a><a class="case card-link reveal" data-page="experience"><div><div class="case-tag">03 / Experience</div><h3>The journey so far.</h3></div><p>Professional experience across top-tier organizations.</p></a><a class="case card-link reveal" data-page="work"><div><div class="case-tag">04 / Selected Work</div><h3>Capability in real contexts.</h3></div><p>Key achievements and high-value project deliveries.</p></a><a class="case card-link reveal" data-page="leadership"><div><div class="case-tag">05 / Leadership</div><h3>Beyond the job title.</h3></div><p>Cross-functional leadership, sustainability, and stakeholder engagement.</p></a><a class="case card-link reveal" data-page="education"><div><div class="case-tag">06 / Education</div><h3>Academic & Professional Excellence.</h3></div><p>Education and core professional qualifications.</p></a><a class="case card-link reveal" data-page="contact"><div><div class="case-tag">07 / Contact</div><h3>Let's create measurable impact.</h3></div><p>Direct contact and professional opportunities.</p></a></div></div></section></main><footer><div class="container footer-inner"><div><span>© <span class="year"></span> Seth Chan Arodi</span><span> · Nairobi · Kenya</span><div class="footer-nav"><a data-page="profile">Profile</a> <a data-page="capabilities">Capabilities</a> <a data-page="experience">Experience</a> <a data-page="work">Selected Work</a> <a data-page="leadership">Leadership</a> <a data-page="education">Education</a> <a data-page="contact">Contact</a></div></div><span>Procurement · Supply Chain · Strategic Sourcing</span></div></footer></div>
+
+<!-- PROFILE PAGE -->
+<div class="page-wrapper" id="profile"><main class="page-shell"><section class="page-hero"><div class="container"><div class="kicker">Profile</div><h1>Profile</h1><p>A strategic leader combining business insight, supply chain optimization, and stakeholder collaboration.</p></div></section><div class="page-content"><section class="section"><div class="container"><div class="section-head reveal"><div><div class="kicker">01 / Profile</div><h2>Strategic vision.<br>Operational excellence.</h2></div><p class="lead">Proven track record in category management, vendor negotiations, contract management, logistics oversight, and compliance governance.</p></div><div class="about-grid"><div class="about-text reveal"><p>My experience spans large telecommunication industries and corporate organizations, where I have consistently delivered cost efficiencies, improved supply reliability, and enabled business continuity.</p><p>I use data, strategic planning, and cross-functional collaboration to understand business environments, assess performance, support evidence-based decisions, and translate challenges into practical, scalable solutions.</p><p>I am especially interested in opportunities where strategic sourcing, technology, analytics, and sustainable development intersect — creating long-term value for organizations, communities, and stakeholders.</p></div><div class="skill-grid reveal"><div class="skill"><span class="skill-num">01</span><h3>Strategic Sourcing</h3><p>Developing and implementing supplier catalogues and price lists within ERP systems.</p></div><div class="skill"><span class="skill-num">02</span><h3>Contract Negotiation</h3><p>Conducting comprehensive supply market analysis to negotiate competitive pricing.</p></div><div class="skill"><span class="skill-num">03</span><h3>Logistics & Warehousing</h3><p>Optimizing storage layout for improved productivity and space utilization.</p></div><div class="skill"><span class="skill-num">04</span><h3>Compliance Oversight</h3><p>Developing and implementing comprehensive policies and procedures.</p></div><div class="skill"><span class="skill-num">05</span><h3>Inventory Optimization</h3><p>Maintaining accurate inventory levels and timely fulfillment of orders.</p></div><div class="skill"><span class="skill-num">06</span><h3>Cross-Functional Leadership</h3><p>Managing teams and ensuring smooth coordination across departments.</p></div><div class="skill"><span class="skill-num">07</span><h3>Cost Reduction</h3><p>Identifying opportunities for consolidating purchases and leveraging economies of scale.</p></div><div class="skill"><span class="skill-num">08</span><h3>Process Improvement</h3><p>Initiating process improvements and aligning procurement strategies with organizational objectives.</p></div></div></div></div></section></div></main><footer><div class="container footer-inner"><div><span>© <span class="year"></span> Seth Chan Arodi</span><span> · Nairobi · Kenya</span><div class="footer-nav"><a data-page="profile">Profile</a> <a data-page="capabilities">Capabilities</a> <a data-page="experience">Experience</a> <a data-page="work">Selected Work</a> <a data-page="leadership">Leadership</a> <a data-page="education">Education</a> <a data-page="contact">Contact</a></div></div><span>Procurement · Supply Chain · Strategic Sourcing</span></div></footer></div>
+
+<!-- CAPABILITIES PAGE -->
+<div class="page-wrapper" id="capabilities"><main class="page-shell"><section class="page-hero"><div class="container"><div class="kicker">Capabilities</div><h1>Capabilities</h1><p>Core professional capabilities across sourcing, logistics, compliance, and strategic leadership.</p></div></section><div class="page-content"><section class="section"><div class="container"><div class="section-head reveal"><div><div class="kicker">02 / Capabilities</div><h2>Where strategy<br>meets execution.</h2></div><p class="lead">Core areas consistently reflected across telecommunication, corporate, and development sectors.</p></div><div class="metrics"><div class="metric reveal"><strong>Strategic Sourcing</strong><span>Category Management</span><p>Managing wide portfolios of corporate service categories, optimizing product mix and cost structure.</p></div><div class="metric reveal"><strong>Contract Negotiation</strong><span>Supplier Management</span><p>Leading end-to-end sourcing projects including requirements gathering, bidding, evaluation, and contracting.</p></div><div class="metric reveal"><strong>Logistics</strong><span>Warehousing & Inventory</span><p>Planning, administration, and control of commercial and technical inventories valued at approx. USD 150M.</p></div><div class="metric reveal"><strong>Compliance</strong><span>Risk Mitigation</span><p>Enhancing regulatory compliance by developing and implementing comprehensive policies and procedures.</p></div><div class="metric reveal"><strong>Leadership</strong><span>Cross-Functional Alignment</span><p>Coordinating people, partners, and multidisciplinary teams to ensure smooth operational coordination.</p></div><div class="metric reveal"><strong>Value Engineering</strong><span>Cost Reduction</span><p>Delivering cost efficiencies and realizing year-on-year savings through strategic process optimization.</p></div></div></div></section></div></main><footer><div class="container footer-inner"><div><span>© <span class="year"></span> Seth Chan Arodi</span><span> · Nairobi · Kenya</span><div class="footer-nav"><a data-page="profile">Profile</a> <a data-page="capabilities">Capabilities</a> <a data-page="experience">Experience</a> <a data-page="work">Selected Work</a> <a data-page="leadership">Leadership</a> <a data-page="education">Education</a> <a data-page="contact">Contact</a></div></div><span>Procurement · Supply Chain · Strategic Sourcing</span></div></footer></div>
+
+<!-- EXPERIENCE PAGE -->
+<div class="page-wrapper" id="experience"><main class="page-shell"><section class="page-hero"><div class="container"><div class="kicker">Experience</div><h1>Experience</h1><p>Professional experience across top-tier telecommunication, corporate, and international development organizations.</p></div></section><div class="page-content"><section class="section"><div class="container"><div class="section-head reveal"><div><div class="kicker">03 / Experience</div><h2>The journey so far.</h2></div><p class="lead">A proven track record of delivering cost efficiencies and enabling business continuity.</p></div><div class="timeline"><article class="job reveal"><div class="job-top"><div><h3>Category Sourcing Specialist</h3><div class="job-company">Safaricom Plc.</div></div><div class="date">OCT 2023 — PRESENT</div></div><ul><li>Develop and implement supplier catalogues and price lists within the ERP system to streamline sourcing and ordering processes.</li><li>Manage a wide portfolio of corporate service categories, optimizing product mix and cost structure to support business requirements.</li><li>Conduct comprehensive supply market analysis to negotiate competitive pricing and enhance vendor value propositions.</li><li>Lead and support end-to-end sourcing projects including requirements gathering, bidding, evaluation, contracting, and supplier onboarding.</li></ul></article><article class="job reveal"><div class="job-top"><div><h3>Senior Lead Warehousing & Logistic</h3><div class="job-company">Airtel Network Kenya Limited</div></div><div class="date">JUN 2021 — SEP 2023</div></div><ul><li>Oversaw planning, administration, and control of commercial and technical inventory valued at approx. USD 150M.</li><li>Optimized storage layout for improved productivity and space utilization, realizing year-on-year savings of $10 million.</li><li>Conducted labor and capacity planning for peak seasons, ensuring service continuity while controlling operational costs.</li><li>Championed sustainability initiatives within the warehouse by implementing recycling programs and energy-efficient lighting solutions.</li></ul></article><article class="job reveal"><div class="job-top"><div><h3>Compliance & Procurement Coordinator</h3><div class="job-company">Airtel Network Kenya</div></div><div class="date">MAY 2020 — JUN 2021</div></div><ul><li>Coordinated cross-functional teams for smooth implementation of S&OPs and Procurement Policies, minimizing supply chain disruptions.</li><li>Spearheaded cost-saving initiatives by identifying opportunities for consolidating purchases and leveraging economies of scale.</li><li>Enhanced regulatory compliance by developing and implementing comprehensive policies and procedures.</li><li>Analyzed trends in internal audit findings to proactively address recurring issues before they led to larger problems or penalties.</li></ul></article><article class="job reveal"><div class="job-top"><div><h3>Procurement Officer (Network & IT Buyer)</h3><div class="job-company">Airtel Africa PLC</div></div><div class="date">MAR 2016 — MAY 2020</div></div><ul><li>Increased accuracy in forecasting by regularly reviewing historical spend data and adjusting procurement plans accordingly.</li><li>Streamlined purchasing processes for increased efficiency, implementing automated systems and tools.</li><li>Implemented a centralized purchasing system for improved visibility into organization-wide spending patterns.</li><li>Reduced procurement costs by negotiating contracts and securing favorable pricing with vendors.</li></ul></article><article class="job reveal"><div class="job-top"><div><h3>Procurement Officer</h3><div class="job-company">Local Capacity for Peace International (LCPI)</div></div><div class="date">OCT 2013 — 2016</div></div><ul><li>Assisted in determining organizational procurement needs and developing annual, biannual, and quarterly procurement plans.</li><li>Prepared procurement transactions and provided a liaison link between supplier and user departments.</li><li>Provided support in the negotiation of contractual agreements with suppliers to ensure value for money.</li><li>Managed the organizational asset register and stores procedures through updating records and managing inventory.</li></ul></article><article class="job reveal"><div class="job-top"><div><h3>Administration and Logistics Assistance</h3><div class="job-company">Independent Electoral & Boundary Commission</div></div><div class="date">2009 — SEP 2013</div></div><ul><li>Preparation of procurement plans in liaison with user departments and preparation of tender documents.</li><li>Participated in evaluation of Commission tenders and preparation of contract documents.</li><li>Assisted with Asset Inventory management, reconciling account reports with the Asset Register.</li><li>Conducted risk assessments on potential suppliers, mitigating potential disruptions to the supply chain.</li></ul></article></div></div></section></div></main><footer><div class="container footer-inner"><div><span>© <span class="year"></span> Seth Chan Arodi</span><span> · Nairobi · Kenya</span><div class="footer-nav"><a data-page="profile">Profile</a> <a data-page="capabilities">Capabilities</a> <a data-page="experience">Experience</a> <a data-page="work">Selected Work</a> <a data-page="leadership">Leadership</a> <a data-page="education">Education</a> <a data-page="contact">Contact</a></div></div><span>Procurement · Supply Chain · Strategic Sourcing</span></div></footer></div>
+
+<!-- WORK PAGE -->
+<div class="page-wrapper" id="work"><main class="page-shell"><section class="page-hero"><div class="container"><div class="kicker">Selected Work</div><h1>Selected Work</h1><p>Key achievements and high-value project deliveries across telecommunications and corporate sectors.</p></div></section><div class="page-content"><section class="section"><div class="container"><div class="section-head reveal"><div><div class="kicker">04 / Selected work</div><h2>Capability in<br>real contexts.</h2></div><p class="lead">A portfolio view of the environments and problems I have successfully navigated.</p></div><div class="case-grid"><article class="case reveal"><div><div class="case-tag">Safaricom Plc.</div><h3>End-to-End Sourcing & ERP Integration</h3></div><p>Developed and implemented supplier catalogues and price lists within the ERP system, streamlining sourcing and ordering processes for corporate service categories.</p></article><article class="case reveal"><div><div class="case-tag">Airtel Network Kenya</div><h3>$150M Inventory Management & $10M Savings</h3></div><p>Oversaw commercial and technical inventory valued at approx. USD 150M. Optimized storage layout for improved productivity, realizing year-on-year savings of $10 million.</p></article><article class="case reveal"><div><div class="case-tag">Airtel Africa PLC</div><h3>Centralized Purchasing & Cost Reduction</h3></div><p>Implemented a centralized purchasing system for improved visibility into organization-wide spending patterns, driving better decision-making and reducing procurement costs.</p></article><article class="case reveal"><div><div class="case-tag">IEBC</div><h3>Supply Chain Risk Mitigation</h3></div><p>Conducted risk assessments on potential suppliers and increased accuracy of inventory records with regular audits, resulting in better stock control and reduced waste.</p></article></div></div></section></div></main><footer><div class="container footer-inner"><div><span>© <span class="year"></span> Seth Chan Arodi</span><span> · Nairobi · Kenya</span><div class="footer-nav"><a data-page="profile">Profile</a> <a data-page="capabilities">Capabilities</a> <a data-page="experience">Experience</a> <a data-page="work">Selected Work</a> <a data-page="leadership">Leadership</a> <a data-page="education">Education</a> <a data-page="contact">Contact</a></div></div><span>Procurement · Supply Chain · Strategic Sourcing</span></div></footer></div>
+
+<!-- LEADERSHIP PAGE -->
+<div class="page-wrapper" id="leadership"><main class="page-shell"><section class="page-hero"><div class="container"><div class="kicker">Leadership</div><h1>Leadership & Impact</h1><p>Leadership shaped through cross-functional team management, sustainability initiatives, and stakeholder engagement.</p></div></section><div class="page-content"><section class="section"><div class="container"><div class="section-head reveal"><div><div class="kicker">05 / Leadership & Impact</div><h2>Beyond the job title.</h2></div><p class="lead">Driving organizational success through people, process, and sustainable practices.</p></div><div class="leadership"><div class="lead-card reveal"><h3>Cross-Functional Leadership</h3><p>Managed cross-functional teams, ensuring smooth coordination between warehouse operations, procurement, and logistics departments.</p></div><div class="lead-card reveal"><h3>Sustainability Champion</h3><p>Championed sustainability initiatives within the warehouse by implementing recycling programs and energy-efficient lighting solutions.</p></div><div class="lead-card reveal"><h3>Stakeholder Engagement</h3><p>Effectively communicated complex regulations to non-expert stakeholders, fostering engagement and buy-in from all levels of the organization.</p></div><div class="lead-card reveal"><h3>Strategic Alignment</h3><p>Adept at initiating process improvements and aligning procurement strategies with overarching organizational objectives.</p></div></div></div></section></div></main><footer><div class="container footer-inner"><div><span>© <span class="year"></span> Seth Chan Arodi</span><span> · Nairobi · Kenya</span><div class="footer-nav"><a data-page="profile">Profile</a> <a data-page="capabilities">Capabilities</a> <a data-page="experience">Experience</a> <a data-page="work">Selected Work</a> <a data-page="leadership">Leadership</a> <a data-page="education">Education</a> <a data-page="contact">Contact</a></div></div><span>Procurement · Supply Chain · Strategic Sourcing</span></div></footer></div>
+
+<!-- EDUCATION PAGE -->
+<div class="page-wrapper" id="education"><main class="page-shell"><section class="page-hero"><div class="container"><div class="kicker">Education</div><h1>Education & Qualifications</h1><p>Academic foundation and professional certifications in procurement and supply chain management.</p></div></section><div class="page-content"><section class="section"><div class="container"><div class="section-head reveal"><div><div class="kicker">06 / Education</div><h2>Academic & Professional<br>Excellence.</h2></div></div><div class="education"><div class="edu reveal"><small>Graduating December 2025</small><h3>Master of Business Administration</h3><p>Procurement & Supply Chain Management</p></div><div class="edu reveal"><small>Graduated 2013</small><h3>Bachelor of Commerce</h3><p>Finance Option, University of Nairobi</p></div></div><div style="margin-top:45px" class="reveal"><div class="kicker">Professional Qualifications</div><div class="tools"><span class="tool">CIPS (UK) – Level 5 (Ongoing)</span><span class="tool">CILT (International) – Advance Level (Grad March 2026)</span><span class="tool">KISM (Kenya) – Member</span><span class="tool">Strategic Sourcing</span><span class="tool">Contract Negotiation</span><span class="tool">ERP & Catalogue Management</span><span class="tool">Logistics & Warehousing</span><span class="tool">Risk Mitigation</span><span class="tool">Cost Reduction</span><span class="tool">Spend Analysis</span></div></div></div></section></div></main><footer><div class="container footer-inner"><div><span>© <span class="year"></span> Seth Chan Arodi</span><span> · Nairobi · Kenya</span><div class="footer-nav"><a data-page="profile">Profile</a> <a data-page="capabilities">Capabilities</a> <a data-page="experience">Experience</a> <a data-page="work">Selected Work</a> <a data-page="leadership">Leadership</a> <a data-page="education">Education</a> <a data-page="contact">Contact</a></div></div><span>Procurement · Supply Chain · Strategic Sourcing</span></div></footer></div>
+
+<!-- CONTACT PAGE -->
+<div class="page-wrapper" id="contact"><main class="page-shell"><section class="page-hero"><div class="container"><div class="kicker">Contact</div><h1>Contact</h1><p>Contact Seth Chan Arodi for opportunities across strategic sourcing, supply chain optimization, and procurement leadership.</p></div></section><div class="page-content"><section class="contact"><div class="container reveal"><div class="kicker">07 / Contact</div><h2>Let's create<br>measurable impact.</h2><p>Open to opportunities where strategic sourcing, logistics optimization, compliance, and sustainable development come together.</p><div class="actions" style="justify-content:center"><a class="btn primary" href="mailto:arodichans@gmail.com">arodichans@gmail.com ↗</a><a class="btn whatsapp" href="https://wa.me/254719111460?text=Hello%20Seth%2C%20I%20am%20interested%20in%20discussing%20professional%20opportunities%20with%20you" target="_blank" rel="noopener">WhatsApp ↗</a><a class="btn secondary" href="tel:+254780827190">+254 780 827 190 ↗</a></div></div></section></div></main><footer><div class="container footer-inner"><div><span>© <span class="year"></span> Seth Chan Arodi</span><span> · Nairobi · Kenya</span><div class="footer-nav"><a data-page="profile">Profile</a> <a data-page="capabilities">Capabilities</a> <a data-page="experience">Experience</a> <a data-page="work">Selected Work</a> <a data-page="leadership">Leadership</a> <a data-page="education">Education</a> <a data-page="contact">Contact</a></div></div><span>Procurement · Supply Chain · Strategic Sourcing</span></div></footer></div>
+
+<button id="topBtn" aria-label="Back to top">↑</button>
+
+<script>
+
+function showImageError(image){
+  image.style.display="none";
+  const fallback=image.parentElement?.querySelector(".image-fallback");
+  if(fallback) fallback.style.display="flex";
+}
+
+const themeToggle=document.getElementById("themeToggle");
+const savedTheme=localStorage.getItem("seth-theme");
+if(savedTheme==="light") document.body.classList.add("light");
+
+function updateThemeButton(){
+  const light=document.body.classList.contains("light");
+  if(!themeToggle) return;
+  const icon=themeToggle.querySelector(".theme-icon");
+  const text=themeToggle.querySelector(".theme-text");
+  if(icon) icon.textContent=light?"☀":"☾";
+  if(text) text.textContent=light?"Dark":"Light";
+}
+updateThemeButton();
+
+themeToggle?.addEventListener("click",()=>{
+  document.body.classList.toggle("light");
+  localStorage.setItem("seth-theme",
+    document.body.classList.contains("light")?"light":"dark");
+  updateThemeButton();
+});
+
+const nav=document.getElementById("nav");
+const topBtn=document.getElementById("topBtn");
+window.addEventListener("scroll",()=>{
+  nav?.classList.toggle("scrolled",window.scrollY>30);
+  if(topBtn) topBtn.style.display=window.scrollY>500?"block":"none";
+},{passive:true});
+
+topBtn?.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+
+const menu=document.getElementById("menu");
+const drawer=document.getElementById("mobileDrawer");
+const closeBtn=document.getElementById("drawerClose");
+
+function setDrawer(open){
+  if(!drawer) return;
+  drawer.classList.toggle("open",open);
+  drawer.setAttribute("aria-hidden",String(!open));
+  menu?.setAttribute("aria-expanded",String(open));
+  document.body.classList.toggle("drawer-open",open);
+}
+menu?.addEventListener("click",()=>setDrawer(true));
+closeBtn?.addEventListener("click",()=>setDrawer(false));
+drawer?.addEventListener("click",(e)=>{ if(e.target===drawer) setDrawer(false); });
+drawer?.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>setDrawer(false)));
+document.addEventListener("keydown",(e)=>{ if(e.key==="Escape") setDrawer(false); });
+
+// PAGE SWITCHING
+function showPage(pageId){
+  const page=document.getElementById(pageId);
+  if(!page || !page.classList.contains("page-wrapper")) return;
+
+  document.querySelectorAll(".page-wrapper").forEach(p=>p.classList.remove("active"));
+  page.classList.add("active");
+
+  page.querySelectorAll(".reveal").forEach(el=>el.classList.add("visible"));
+
+  document.querySelectorAll("[data-page]").forEach(link=>{
+    link.classList.toggle("active",link.getAttribute("data-page")===pageId);
+  });
+
+  window.scrollTo({top: 0, behavior: "smooth"});
+  nav?.classList.remove("scrolled");
+  if(history.replaceState) history.replaceState(null,"","#"+pageId);
+}
+
+document.querySelectorAll("[data-page]").forEach(link=>{
+  link.addEventListener("click",(e)=>{
+    e.preventDefault();
+    showPage(link.getAttribute("data-page"));
+    setDrawer(false);
+  });
+});
+
+document.getElementById("navLogo")?.addEventListener("click",()=>showPage("home"));
+
+const startPage=(location.hash||"").replace("#","");
+if(startPage) showPage(startPage);
+
+document.querySelectorAll(".year").forEach(el=>{
+  el.textContent=new Date().getFullYear();
+});
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting) entry.target.classList.add("visible");
+  });
+},{threshold:.10});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+</script>
+</body>
+</html>
+```
