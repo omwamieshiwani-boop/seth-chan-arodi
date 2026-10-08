@@ -146,6 +146,49 @@ html{scrollbar-color:var(--a) var(--bg)}
 .gal img{width:100%;display:block;transition:transform .8s cubic-bezier(.2,.8,.2,1)}.gal figure:hover img{transform:scale(1.07)}
 #lb{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.9);display:none;place-items:center;cursor:zoom-out}#lb.on{display:grid}#lb img{max-width:92vw;max-height:90vh;border-radius:16px}
 @media(max-width:600px){.strip{grid-template-columns:1fr}}
+@media(max-width:900px){
+.wrap{width:calc(100% - 36px)}
+.hero{min-height:auto;padding:108px 0 60px}
+.hg{gap:48px}
+h1{font-size:clamp(40px,10vw,68px)}
+h2{font-size:clamp(30px,7vw,46px)}
+.hc,.typed{font-size:16px}
+.pc{max-width:400px;width:100%;margin:0 auto}
+.chip.c1{left:6px;top:-16px}.chip.c2{right:6px;bottom:-16px}
+.sec{padding:64px 0}.sh{margin-bottom:30px}
+.ph{padding:112px 0 28px}.ph h1{font-size:clamp(36px,9vw,60px)}.ph p{font-size:16px;margin-top:12px}
+.g2,.g3{grid-template-columns:1fr 1fr;gap:16px}
+.card{padding:22px}.cover{margin:-22px -22px 18px}
+.about{gap:36px}.tall{height:320px}
+.sus{min-height:280px}.sus h3{font-size:28px}
+.job{padding-bottom:40px}
+}
+@media(max-width:600px){
+.wrap{width:calc(100% - 28px)}
+.hero{padding-top:96px}
+.eye{font-size:12px;margin-bottom:18px}
+h1{font-size:clamp(38px,12.5vw,54px);letter-spacing:-.04em;line-height:1.02}
+h2{font-size:clamp(28px,9vw,38px);line-height:1.08}
+.g2,.g3{grid-template-columns:1fr;gap:14px}
+.acts .btn,.ct .acts .btn{flex:1 1 100%;justify-content:center;text-align:center}
+.pc{max-width:100%}.art{height:340px}.mono{font-size:70px}
+.chip{font-size:11px;padding:7px 12px}.chip b{font-size:16px}
+.cap{padding:12px 14px}.cap small{font-size:12px}
+.sec{padding:52px 0}
+.card.big{min-height:0;gap:12px}.card.big .go{top:16px;right:18px}
+.card h3{font-size:19px}.card p{font-size:14.5px}
+.num{font-size:38px}
+.tl{margin-left:2px}.job{padding:0 0 34px 30px}
+.jt{flex-direction:column;gap:8px}.jd{align-self:flex-start}
+.job h3{font-size:19px}.job ul{font-size:14px}
+.tools{gap:8px}.tools span{font-size:12.5px;padding:7px 12px}
+.tall{height:250px}.cover{height:150px}.cover.sm{height:120px}
+.strip .im{height:130px}
+.sus h3{font-size:26px}
+.sub{margin-top:40px}
+footer{padding-bottom:84px}
+#top{right:14px;bottom:14px}
+}
 </style>
 </head>
 <body>
